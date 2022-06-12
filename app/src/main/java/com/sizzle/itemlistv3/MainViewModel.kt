@@ -41,8 +41,10 @@ class MainViewModel {
         val item01 = Item(id = 1, title = "First Item")
         val item02 = Item(id = 2, title = "Second Item")
         val item03 = Item(id = 3, title = "Third Item")
+        val item04 = Item(id = 4, title = "Fourth Item")
+        val item05 = Item(id = 5, title = "Fifth Item")
 
-        allItems = mutableListOf(item01, item02, item03)
+        allItems = mutableListOf(item01, item02, item03, item04, item05)
         specificItem = Item(id = 0, title = "Initial Item")
         showItems = allItems		//	Start by Showing All Items
 
