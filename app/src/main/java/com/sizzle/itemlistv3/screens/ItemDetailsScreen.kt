@@ -255,6 +255,7 @@ fun ItemDetailScreen(
 											navController.navigate(route = NavRoutes.ItemListScreen.route) {
 												popUpTo(NavRoutes.ItemListScreen.route)
 											}                                    // Go to Item List Screen
+											viewModel.updateItemShowList()       // Maintains Item List Filter & Sort State
 										}) {
 										Text(
 											text = "Back",

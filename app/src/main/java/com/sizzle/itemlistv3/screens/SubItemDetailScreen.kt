@@ -135,6 +135,7 @@ fun SubItemDetailScreen(
                                                         + "/" + "READ"
                                             )
                                             viewModel.updateSubItemShowList(itemID.toInt())         // Triggers SubItem List Recompose
+                                            viewModel.updateItemShowList()                          // Maintains Item List Filter & Sort State
                                         }) {
                                         Text(
                                             text = "Submit",
@@ -159,6 +160,7 @@ fun SubItemDetailScreen(
                                                     inclusive = true
                                                 }
                                             }
+                                            viewModel.updateItemShowList()                          // Maintains Item List Filter & Sort State
                                         }) {
                                         Text(
                                             text = "Back",
@@ -323,6 +325,7 @@ fun SubItemDetailScreen(
                                             }
                                             viewModel.updateSubItem(mySubItem)        // Update SubItem in List
                                             viewModel.updateSubItemShowList(subItemIDLink.toInt())            // Triggers Item List Recompose
+                                            viewModel.updateItemShowList()                          // Maintains Item List Filter & Sort State
                                         }) {
                                         Text(
                                             text = "Submit",
@@ -347,6 +350,7 @@ fun SubItemDetailScreen(
                                                     inclusive = true
                                                 }
                                             }
+                                            viewModel.updateItemShowList()                          // Maintains Item List Filter & Sort State
                                         }) {
                                         Text(
                                             text = "Back",
@@ -443,6 +447,7 @@ fun SubItemDetailScreen(
                                                         + "/" + "READ"
                                             )
                                             viewModel.updateSubItemShowList(mySubItem.item_id_link)     // Triggers SubItem List Recompose
+                                            viewModel.updateItemShowList()                          // Maintains Item List Filter & Sort State
                                         }) {
                                         Text(
                                             text = "Delete",
@@ -455,7 +460,6 @@ fun SubItemDetailScreen(
                                     //--- Cancel Button
                                     Button(
                                         onClick = {
-
                                             navController.navigate(             // Go to Item Details Screen
                                                 route = NavRoutes.ItemDetailScreen.route
                                                         + "/" + subItemIDLink
@@ -467,6 +471,7 @@ fun SubItemDetailScreen(
                                                             + "/" + "READ"
                                                 )
                                             }
+                                            viewModel.updateItemShowList()                          // Maintains Item List Filter & Sort State
                                         }) {
                                         Text(
                                             text = "Cancel",
